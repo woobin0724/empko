@@ -1,0 +1,132 @@
+# -*- coding: utf-8 -*-
+"""
+data/companies.py
+채용 공고 모의(Mock) / 백업 데이터
+
+※ 아래 기업명은 모두 가상(fictional) 기업이며, 실제 존재하는 특정 기업의
+   채용 조건을 그대로 옮긴 것이 아닙니다. 워크넷 Open API 연동이 실패하거나
+   서비스키가 없을 때 자동으로 사용되는 대체 데이터입니다.
+   (services/worknet_api.py 의 fallback 로직 참고)
+"""
+
+MOCK_JOBS = [
+    # ---------------- 기계 ----------------
+    {"id": 1, "company": "한빛정밀공업", "title": "CNC 선반·밀링 오퍼레이터",
+     "department": "기계과", "required_cert_codes": ["MC01", "MC02"],
+     "region": "전북 익산", "salary": "2,800~3,200만원", "company_type": "중견기업"},
+    {"id": 2, "company": "대성메카트로닉스", "title": "생산자동화 설비 엔지니어",
+     "department": "기계과", "required_cert_codes": ["MC03", "EL01"],
+     "region": "전북 군산", "salary": "2,900~3,300만원", "company_type": "중소기업"},
+    {"id": 3, "company": "태백중공업", "title": "중공업 생산기술 신입사원",
+     "department": "기계과", "required_cert_codes": ["MC01", "MC04"],
+     "region": "경남 창원", "salary": "3,200~3,800만원", "company_type": "대기업"},
+    {"id": 4, "company": "신성정공", "title": "정밀가공 라인 기술직",
+     "department": "기계과", "required_cert_codes": ["MC02", "MC03"],
+     "region": "전북 완주", "salary": "3,000~3,400만원", "company_type": "중견기업"},
+    {"id": 5, "company": "우진산업기계", "title": "설비보전 및 유지보수",
+     "department": "기계과", "required_cert_codes": ["MC05", "MC06"],
+     "region": "전북 전주", "salary": "2,700~3,000만원", "company_type": "중소기업"},
+
+    # ---------------- 전기/전자 ----------------
+    {"id": 6, "company": "코리아파워시스템", "title": "전기설비 유지보수 기술직",
+     "department": "전기전자과", "required_cert_codes": ["EL01", "EL02"],
+     "region": "전북 전주", "salary": "2,900~3,300만원", "company_type": "중견기업"},
+    {"id": 7, "company": "한강전력엔지니어링", "title": "승강기 유지보수 기사",
+     "department": "전기전자과", "required_cert_codes": ["EL01", "EL06"],
+     "region": "서울 강동구", "salary": "2,800~3,100만원", "company_type": "중소기업"},
+    {"id": 8, "company": "미래에너지솔루션", "title": "신재생에너지 발전설비 엔지니어",
+     "department": "전기전자과", "required_cert_codes": ["EL02", "EL03"],
+     "region": "전남 나주", "salary": "3,300~3,800만원", "company_type": "중견기업"},
+    {"id": 9, "company": "대한이엔지", "title": "전기공사 현장 보조기사",
+     "department": "전기전자과", "required_cert_codes": ["EL01"],
+     "region": "전북 김제", "salary": "2,600~2,900만원", "company_type": "스타트업"},
+    {"id": 10, "company": "서울전기설비", "title": "건축전기설비 시공기술직",
+     "department": "전기전자과", "required_cert_codes": ["EL01", "EL02"],
+     "region": "서울 금천구", "salary": "2,900~3,200만원", "company_type": "중소기업"},
+
+    # ---------------- IT/소프트웨어 ----------------
+    {"id": 11, "company": "넥스트웨이브소프트", "title": "백엔드 주니어 개발자",
+     "department": "IT소프트웨어과", "required_cert_codes": ["IT01", "IT05"],
+     "region": "서울 강남구", "salary": "3,200~3,800만원", "company_type": "중견기업"},
+    {"id": 12, "company": "스마트팩토리시스템즈", "title": "스마트팩토리 관제 시스템 운영",
+     "department": "IT소프트웨어과", "required_cert_codes": ["IT06", "IT01"],
+     "region": "전북 전주", "salary": "3,000~3,400만원", "company_type": "중소기업"},
+    {"id": 13, "company": "클라우드베이스코리아", "title": "클라우드 인프라 신입 엔지니어",
+     "department": "IT소프트웨어과", "required_cert_codes": ["IT05", "IT04"],
+     "region": "경기 판교", "salary": "3,400~4,000만원", "company_type": "스타트업"},
+    {"id": 14, "company": "한빛데이터센터", "title": "데이터센터 운영 인프라 직군",
+     "department": "IT소프트웨어과", "required_cert_codes": ["IT01", "IT03"],
+     "region": "전북 정읍", "salary": "3,000~3,300만원", "company_type": "중소기업"},
+    {"id": 15, "company": "이지테크솔루션", "title": "IT 인프라 지원 신입사원",
+     "department": "IT소프트웨어과", "required_cert_codes": ["IT06"],
+     "region": "전북 전주", "salary": "2,700~2,900만원", "company_type": "중소기업"},
+
+    # ---------------- 화공 ----------------
+    {"id": 16, "company": "동양화학산업", "title": "화학분석 품질관리직",
+     "department": "화공과", "required_cert_codes": ["CH01"],
+     "region": "전남 여수", "salary": "2,900~3,300만원", "company_type": "중견기업"},
+    {"id": 17, "company": "한진케미칼", "title": "위험물 안전관리 담당",
+     "department": "화공과", "required_cert_codes": ["CH02"],
+     "region": "울산", "salary": "3,100~3,500만원", "company_type": "대기업"},
+    {"id": 18, "company": "대성가스엔지니어링", "title": "가스설비 안전점검 기술직",
+     "department": "화공과", "required_cert_codes": ["CH04"],
+     "region": "전북 군산", "salary": "2,800~3,100만원", "company_type": "중소기업"},
+    {"id": 19, "company": "청우화공", "title": "화공플랜트 공정기술 신입",
+     "department": "화공과", "required_cert_codes": ["CH03", "CH02"],
+     "region": "전남 여수", "salary": "3,300~3,900만원", "company_type": "중견기업"},
+
+    # ---------------- 메카트로닉스 ----------------
+    {"id": 20, "company": "로보텍코리아", "title": "산업용 로봇 유지보수 엔지니어",
+     "department": "메카트로닉스과", "required_cert_codes": ["MT01", "MT02"],
+     "region": "경기 안산", "salary": "3,100~3,600만원", "company_type": "중견기업"},
+    {"id": 21, "company": "오토메카트로닉스", "title": "자동화 라인 설계보조",
+     "department": "메카트로닉스과", "required_cert_codes": ["MT01"],
+     "region": "전북 익산", "salary": "2,900~3,200만원", "company_type": "중소기업"},
+    {"id": 22, "company": "퓨처로보틱스", "title": "로봇 기구 개발 신입 엔지니어",
+     "department": "메카트로닉스과", "required_cert_codes": ["MT03", "MT02"],
+     "region": "대전", "salary": "3,300~3,800만원", "company_type": "스타트업"},
+
+    # ---------------- 건축/토목 ----------------
+    {"id": 23, "company": "한국건축시공", "title": "건축 마감시공 기술직",
+     "department": "건축토목과", "required_cert_codes": ["CV01", "CV02"],
+     "region": "전북 전주", "salary": "2,800~3,100만원", "company_type": "중소기업"},
+    {"id": 24, "company": "대림토목엔지니어링", "title": "토목 현장 시공관리 보조",
+     "department": "건축토목과", "required_cert_codes": ["CV04"],
+     "region": "전북 남원", "salary": "2,900~3,200만원", "company_type": "중견기업"},
+    {"id": 25, "company": "신한측량기술", "title": "측량 및 지형정보 조사원",
+     "department": "건축토목과", "required_cert_codes": ["CV05"],
+     "region": "전북 정읍", "salary": "2,700~3,000만원", "company_type": "중소기업"},
+    {"id": 26, "company": "우성건설", "title": "건축시공 현장기술직",
+     "department": "건축토목과", "required_cert_codes": ["CV03", "CV02"],
+     "region": "광주", "salary": "3,000~3,400만원", "company_type": "중견기업"},
+
+    # ---------------- 자동차 ----------------
+    {"id": 27, "company": "전북모터스정비", "title": "자동차 정비 기술직",
+     "department": "자동차과", "required_cert_codes": ["AT01"],
+     "region": "전북 전주", "salary": "2,700~3,000만원", "company_type": "중소기업"},
+    {"id": 28, "company": "한일오토서비스", "title": "차체 수리 및 도장 기술직",
+     "department": "자동차과", "required_cert_codes": ["AT03", "AT01"],
+     "region": "전북 군산", "salary": "2,800~3,100만원", "company_type": "중소기업"},
+    {"id": 29, "company": "현대모빌리티파츠", "title": "완성차 정비 품질관리직",
+     "department": "자동차과", "required_cert_codes": ["AT02", "AT01"],
+     "region": "충남 아산", "salary": "3,200~3,600만원", "company_type": "대기업"},
+
+    # ---------------- 조선 ----------------
+    {"id": 30, "company": "동해조선기술", "title": "선박 의장 생산기술직",
+     "department": "조선과", "required_cert_codes": ["SB01"],
+     "region": "경남 거제", "salary": "3,100~3,500만원", "company_type": "대기업"},
+    {"id": 31, "company": "한주조선산업", "title": "조선 생산관리 신입사원",
+     "department": "조선과", "required_cert_codes": ["SB02", "SB01"],
+     "region": "전남 목포", "salary": "3,000~3,400만원", "company_type": "중견기업"},
+
+    # ---------------- 식품가공 ----------------
+    {"id": 32, "company": "청정식품가공", "title": "식품가공 생산관리직",
+     "department": "식품가공과", "required_cert_codes": ["FD01"],
+     "region": "전북 익산", "salary": "2,600~2,900만원", "company_type": "중소기업"},
+    {"id": 33, "company": "삼립베이커리랩", "title": "제과·제빵 생산기술직",
+     "department": "식품가공과", "required_cert_codes": ["FD02", "FD03"],
+     "region": "전북 전주", "salary": "2,700~3,000만원", "company_type": "중견기업"},
+    {"id": 34, "company": "익산푸드파크", "title": "식품안전 품질관리 신입",
+     "department": "식품가공과", "required_cert_codes": ["FD01"],
+     "region": "전북 익산", "salary": "2,700~3,000만원", "company_type": "중소기업"},
+]
